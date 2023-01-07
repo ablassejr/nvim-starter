@@ -1,76 +1,100 @@
-<<<<<<< HEAD
-<h4 align="center">
-  <a href="https://lazy.folke.io/installation">Install</a>
-  ·
-  <a href="https://lazy.folke.io/configuration">Configure</a>
-  ·
-  <a href="https://lazy.folke.io">Docs</a>
-</h4>
+# LazyVim
 
-<div align="center"><p>
-    <a href="https://github.com/folke/lazy.nvim/releases/latest">
-      <img alt="Latest release" src="https://img.shields.io/github/v/release/folke/lazy.nvim?style=for-the-badge&logo=starship&color=C9CBFF&logoColor=D9E0EE&labelColor=302D41&include_prerelease&sort=semver" />
-    </a>
-    <a href="https://github.com/folke/lazy.nvim/pulse">
-      <img alt="Last commit" src="https://img.shields.io/github/last-commit/folke/lazy.nvim?style=for-the-badge&logo=starship&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"/>
-    </a>
-    <a href="https://github.com/folke/lazy.nvim/blob/main/LICENSE">
-      <img alt="License" src="https://img.shields.io/github/license/folke/lazy.nvim?style=for-the-badge&logo=starship&color=ee999f&logoColor=D9E0EE&labelColor=302D41" />
-    </a>
-    <a href="https://github.com/folke/lazy.nvim/stargazers">
-      <img alt="Stars" src="https://img.shields.io/github/stars/folke/lazy.nvim?style=for-the-badge&logo=starship&color=c69ff5&logoColor=D9E0EE&labelColor=302D41" />
-    </a>
-    <a href="https://github.com/folke/lazy.nvim/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/folke/lazy.nvim?style=for-the-badge&logo=bilibili&color=F5E0DC&logoColor=D9E0EE&labelColor=302D41" />
-    </a>
-    <a href="https://github.com/folke/lazy.nvim">
-      <img alt="Repo Size" src="https://img.shields.io/github/repo-size/folke/lazy.nvim?color=%23DDB6F2&label=SIZE&logo=codesandbox&style=for-the-badge&logoColor=D9E0EE&labelColor=302D41" />
-    </a>
-    <a href="https://twitter.com/intent/follow?screen_name=folke">
-      <img alt="follow on Twitter" src="https://img.shields.io/twitter/follow/folke?style=for-the-badge&logo=twitter&color=8aadf3&logoColor=D9E0EE&labelColor=302D41" />
-    </a>
-</div>
+A starter template for Neovim using [lazy.nvim](https://github.com/folke/lazy.nvim)
 
+![image](https://user-images.githubusercontent.com/292349/210136312-c211f781-6d51-46b0-a265-6098bdbb364d.png)
 
+## ✅ Todo
 
-**lazy.nvim** is a modern plugin manager for Neovim.
+- [ ] documentation
+- [x] treesitter auto-install seems broken. Switch to `ensure_installed` instead?
+- [x] list all plugins in readme
+- [ ] test all-the-things
 
-![image](https://user-images.githubusercontent.com/292349/208301737-68fb279c-ba70-43ef-a369-8c3e8367d6b1.png)
+## File Structure
 
-## ✨ Features
+<pre>
+~/.config/nvim
+├── lua
+│   └── lazyvim
+│       ├── config
+│       │   ├── autocmds.lua
+│       │   ├── keymaps.lua
+│       │   ├── lazy.lua
+│       │   ├── options.lua
+│       │   └── settings.lua
+│       ├── plugins
+│       │   ├── lsp
+│       │   │   ├── format.lua
+│       │   │   ├── init.lua
+│       │   │   ├── keymaps.lua
+│       │   │   └── servers.lua
+│       │   ├── coding.lua
+│       │   ├── colorscheme.lua
+│       │   ├── config.lua
+│       │   ├── editor.lua
+│       │   ├── treesitter.lua
+│       │   ├── ui.lua
+│       │   └── util.lua
+│       └── util.lua
+├── init.lua
+├── lazy-lock.json
+├── LICENSE
+├── README.md
+└── stylua.toml
+</pre>
 
-- 📦 Manage all your Neovim plugins with a powerful UI
-- 🚀 Fast startup times thanks to automatic caching and bytecode compilation of Lua modules
-- 💾 Partial clones instead of shallow clones
-- 🔌 Automatic lazy-loading of Lua modules and lazy-loading on events, commands, filetypes, and key mappings
-- ⏳ Automatically install missing plugins before starting up Neovim, allowing you to start using it right away
-- 💪 Async execution for improved performance
-- 🛠️ No need to manually compile plugins
-- 🧪 Correct sequencing of dependencies
-- 📁 Configurable in multiple files
-- 📚 Generates helptags of the headings in `README.md` files for plugins that don't have vimdocs
-- 💻 Dev options and patterns for using local plugins
-- 📊 Profiling tools to optimize performance
-- 🔒 Lockfile `lazy-lock.json` to keep track of installed plugins
-- 🔎 Automatically check for updates
-- 📋 Commit, branch, tag, version, and full [Semver](https://devhints.io/semver) support
-- 📈 Statusline component to see the number of pending updates
-- 🎨 Automatically lazy-loads colorschemes
+<!-- plugins:start -->
 
-## ⚡️ Requirements
+## Plugins
 
-- Neovim >= **0.8.0** (needs to be built with **LuaJIT**)
-- Git >= **2.19.0** (for partial clones support)
-- a [Nerd Font](https://www.nerdfonts.com/) **_(optional)_**
-- [luarocks](https://luarocks.org/) to install rockspecs.
-  You can remove `rockspec` from `opts.pkg.sources` to disable this feature.
+- [alpha-nvim](https://github.com/goolord/alpha-nvim)
+- [catppuccin](https://github.com/catppuccin/nvim)
+- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+- [cmp-emoji](https://github.com/hrsh7th/cmp-emoji)
+- [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [cmp-path](https://github.com/hrsh7th/cmp-path)
+- [cmp_luasnip](https://github.com/saadparwaiz1/cmp_luasnip)
+- [dressing.nvim](https://github.com/stevearc/dressing.nvim)
+- [flit.nvim](https://github.com/ggandor/flit.nvim)
+- [friendly-snippets](https://github.com/rafamadriz/friendly-snippets)
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)
+- [indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [lazy.nvim](https://github.com/folke/lazy.nvim)
+- [leap.nvim](https://github.com/ggandor/leap.nvim)
+- [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim)
+- [LuaSnip](https://github.com/L3MON4D3/LuaSnip)
+- [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim)
+- [mason.nvim](https://github.com/williamboman/mason.nvim)
+- [mini.ai](https://github.com/echasnovski/mini.ai)
+- [mini.bufremove](https://github.com/echasnovski/mini.bufremove)
+- [mini.comment](https://github.com/echasnovski/mini.comment)
+- [mini.indentscope](https://github.com/echasnovski/mini.indentscope)
+- [mini.pairs](https://github.com/echasnovski/mini.pairs)
+- [mini.surround](https://github.com/echasnovski/mini.surround)
+- [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
+- [neoconf.nvim](https://github.com/folke/neoconf.nvim)
+- [neodev.nvim](https://github.com/folke/neodev.nvim)
+- [noice.nvim](https://github.com/folke/noice.nvim)
+- [nui.nvim](https://github.com/MunifTanjim/nui.nvim)
+- [null-ls.nvim](https://github.com/jose-elias-alvarez/null-ls.nvim)
+- [nvim-bufferline.lua](https://github.com/akinsho/nvim-bufferline.lua)
+- [nvim-cmp](https://github.com/hrsh7th/nvim-cmp)
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+- [nvim-notify](https://github.com/rcarriga/nvim-notify)
+- [nvim-spectre](https://github.com/windwp/nvim-spectre)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [nvim-treesitter-textobjects](https://github.com/nvim-treesitter/nvim-treesitter-textobjects)
+- [nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)
+- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+- [persistence.nvim](https://github.com/folke/persistence.nvim)
+- [plenary.nvim](https://github.com/nvim-lua/plenary.nvim)
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
+- [todo-comments.nvim](https://github.com/folke/todo-comments.nvim)
+- [tokyonight.nvim](https://github.com/folke/tokyonight.nvim)
+- [trouble.nvim](https://github.com/folke/trouble.nvim)
+- [vim-illuminate](https://github.com/RRethy/vim-illuminate)
+- [vim-startuptime](https://github.com/dstein64/vim-startuptime)
+- [which-key.nvim](https://github.com/folke/which-key.nvim)
 
-## 🚀 Getting Started
-
-Check the [documentation website](https://lazy.folke.io/) for more information.
-=======
-# 💤 LazyVim
-
-A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
-Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
->>>>>>> 803bc181d7c0d6d5eeba9274d9be49b287294d99
+<!-- plugins:end -->
