@@ -1,7 +1,6 @@
 {
   "neodev": {
     "library": {
-<<<<<<< HEAD
       "plugins": [
         "plenary.nvim"
       ]
@@ -10,18 +9,7 @@
   "lspconfig": {
     "lua_ls": {
       "Lua.runtime.version": "LuaJIT",
-      "Lua.workspace.checkThirdParty": false
-=======
-      "enabled": true,
-      "plugins": true
-    }
-  },
-  "neoconf": {
-    "plugins": {
-      "lua_ls": {
-        "enabled": true
-      }
->>>>>>> 803bc181d7c0d6d5eeba9274d9be49b287294d99
+      "Lua.workspace.checkThirdParty": true
     }
   }
 }
