@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *.log
 /.repro
 /.tests
@@ -7,3 +8,13 @@
 foo.*
 node_modules
 tt.*
+=======
+tt.*
+.tests
+doc/tags
+debug
+.repro
+foo.*
+*.log
+data
+>>>>>>> 803bc181d7c0d6d5eeba9274d9be49b287294d99

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h4 align="center">
   <a href="https://lazy.folke.io/installation">Install</a>
   ·
@@ -67,3 +68,9 @@
 ## 🚀 Getting Started
 
 Check the [documentation website](https://lazy.folke.io/) for more information.
+=======
+# 💤 LazyVim
+
+A starter template for [LazyVim](https://github.com/LazyVim/LazyVim).
+Refer to the [documentation](https://lazyvim.github.io/installation) to get started.
+>>>>>>> 803bc181d7c0d6d5eeba9274d9be49b287294d99
